@@ -1,19 +1,26 @@
 # Data Structure
 
 - List
-    - listSize
+    - listSize √
     - pos
-    - length
-    - clear
-    - toString
-    - getElement
-    - insert
-    - append
-    - remove
-    - front
-    - end
-    - prev
-    - next
-    - currPos
-    - moveTo
+    - length √
+    - clear √
+    - toString √
+    - getElement √
+    - insert √
+    - append √
+    - remove √
+    - front √
+    - end √
+    - prev √
+    - next √
+    - currPos √
+    - moveTo √
+    - hasNext √
+    - hasPrev √
 
+- Stack
+    - push √
+    - pop √
+    - peek √
+    - clear √
