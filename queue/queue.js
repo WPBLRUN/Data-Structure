@@ -15,7 +15,7 @@ class Queue {
         this._dataStore.push(element);
     }
 
-    dequeue (element) {
+    dequeue () {
         return this._dataStore.shift();
     }
 
@@ -33,6 +33,10 @@ class Queue {
 
     isEmpty () {
         return this._dataStore.length === 0;
+    }
+
+    clear () {
+        this._init();
     }
 }
 

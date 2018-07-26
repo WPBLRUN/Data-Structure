@@ -2,7 +2,7 @@
 
 - List
     - listSize √
-    - pos
+    - pos √
     - length √
     - clear √
     - toString √
@@ -23,4 +23,13 @@
     - push √
     - pop √
     - peek √
+    - clear √
+
+- Queue
+    - enqueue √
+    - dequeue √
+    - front √
+    - back √
+    - toString √
+    - isEmpty √
     - clear √
