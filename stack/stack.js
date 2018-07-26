@@ -1,4 +1,10 @@
 // Stack
+// TODO: 数制转换
+// TODO: 判断回文
+// TODO: 模仿递归
+// TODO: 匹配括号
+// TODO: 逆波兰表达式
+
 class Stack {
     constructor () {
         this._init();
