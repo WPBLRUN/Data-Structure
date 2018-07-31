@@ -33,3 +33,39 @@
     - toString √
     - isEmpty √
     - clear √
+
+- Chain table
+    - insert √
+    - remove √
+    - display √
+
+- Dual Chain table
+    - insert
+    - remove
+
+- Dictionary
+    - add
+    - find
+    - remove
+    - showAll
+    - count
+
+- Hash table
+    - put
+    - get
+    - showDistro
+
+- Set
+    - add
+    - remove
+    - size
+    - union
+    - insert
+    - subset
+    - difference
+    - subset
+    - show
+    - contains
+
+- Tree
+
