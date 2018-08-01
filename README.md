@@ -40,8 +40,9 @@
     - display √
 
 - Dual Chain table
-    - insert
-    - remove
+    - insert √
+    - remove √
+    - displayReverse √
 
 - Dictionary
     - add
