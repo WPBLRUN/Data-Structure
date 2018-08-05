@@ -45,16 +45,16 @@
     - displayReverse √
 
 - Dictionary
-    - add
-    - find
-    - remove
-    - showAll
-    - count
+    - add √
+    - find √
+    - remove √
+    - showAll √
+    - count √
 
 - Hash table
-    - put
-    - get
-    - showDistro
+    - put √
+    - get √
+    - showDistro √
 
 - Set
     - add
