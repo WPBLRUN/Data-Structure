@@ -1,5 +1,5 @@
 //TODO: Hash table article
-//TODO: 碰撞处理
+// 线性探测法法处理碰撞
 class HashTable {
     constructor () {
         // Array length strategies
@@ -7,6 +7,7 @@ class HashTable {
         // 2. Why pow of 2 ?
         this.tableLength = 127;
         this.table = new Array(this.tableLength);
+        this.values = [];
     }
 
     hash (string) {
@@ -21,18 +22,28 @@ class HashTable {
         return parseInt(total);
     }
 
-    put (data) {
-        this.table[this.hash(data)] = data;
+    put (key, data) {
+        let pos = this.hash(key);
+        while (this.table[pos] !== undefined) {
+            pos++;
+        }
+        this.table[pos] = key;
+        this.values[pos] = data;
     }
 
     get (key) {
-        return this.table[this.hash(key)];
+        let pos = this.hash(key);
+        let len = this.table[pos].length;
+        while (this.table[pos]!== key && pos < len) {
+            pos++;
+        }
+        return this.values[pos];
     }
 
     showDistro () {
         for (let i = 0; i < this.tableLength; i++) {
             if (this.table[i] !== undefined) {
-                console.log(i , ' : ', this.table[i]);
+                console.log(i , ' : ', this.table[i], this.values[i]);
             }
         }
     }
