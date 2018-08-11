@@ -57,16 +57,16 @@
     - showDistro √
 
 - Set
-    - add
-    - remove
-    - size
-    - union
-    - insert
-    - subset
-    - difference
-    - subset
-    - show
-    - contains
+    - add √
+    - remove √
+    - size √
+    - union √
+    - insert √
+    - subset √
+    - difference √
+    - subset √
+    - data √
+    - contains √
 
 - Tree
 
