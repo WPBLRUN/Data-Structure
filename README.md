@@ -68,5 +68,10 @@
     - data √
     - contains √
 
-- Tree
+- Binary Search Tree || Binary Sort Tree
+    - insert
+    - show
+    - preorder traversal
+    - inorder traversal
+    - postorder traversal
 
