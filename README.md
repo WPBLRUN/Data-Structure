@@ -69,9 +69,12 @@
     - contains √
 
 - Binary Search Tree || Binary Sort Tree
-    - insert
-    - show
-    - preorder traversal
-    - inorder traversal
-    - postorder traversal
+    - insert √
+    - show √
+    - getMin √
+    - getMax √
+    - preorder traversal √
+    - inorder traversal √
+    - postorder traversal √
+    - remove √
 
