@@ -81,3 +81,6 @@
 - Graph
     - addEdge √
     - showGraph √
+    - depthFirstSearch √
+    - breadthFirstSearch √
+    - pathTo √
