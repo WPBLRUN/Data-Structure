@@ -85,3 +85,7 @@
     - breadthFirstSearch √
     - pathTo √
     - topSort √
+
+- Sort
+    - bubbleSort √
+    - selectionSort √
