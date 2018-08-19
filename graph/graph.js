@@ -8,6 +8,7 @@ class Vertex {
 class Graph {
     constructor (v) {
         this.vertices = v;
+        this.vertexList = [];
         this.eges = 0;
         this.adj = [];
         this.marked = [];
@@ -95,5 +96,29 @@ class Graph {
         }
         path.push(source);
         return path;
+    }
+
+    topSort () {
+        let stack = [];
+        let visited = [];
+        for (let i = 0; i < this.vertices; i++) {
+            visited[i] = false;
+        }
+        for (let i = 0; i < this.vertices; i++) {
+            visited[i] === false && this.topSortHelper(i, visited, stack);
+        }
+        for (let i = 0; i < stack.length; i++) {
+            stack[i] !== undefined && stack[i] !== false && console.log(this.vertexList[stack[i]]);
+        }
+    }
+
+    topSortHelper (v, visited, stack) {
+        visited[v] = true;
+        for (let w in this.adj[v]) {
+            if (!visited[w]) {
+                this.topSortHelper(visited[w], visited, stack);
+            }
+        }
+        stack.push(v);
     }
 }

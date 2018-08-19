@@ -84,3 +84,4 @@
     - depthFirstSearch √
     - breadthFirstSearch √
     - pathTo √
+    - topSort √
