@@ -89,3 +89,4 @@
 - Sort
     - bubbleSort √
     - selectionSort √
+    - insertionSort √
