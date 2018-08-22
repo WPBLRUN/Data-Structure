@@ -24,7 +24,7 @@ function selectionSort (arr) {
     }
 }
 
-function insertionSort(arr) {
+function insertionSort (arr) {
     let temp, j;
     for (let i = 1; i < arr.length; i++) {
         temp = arr[i];
@@ -34,6 +34,23 @@ function insertionSort(arr) {
             j--;
         }
         arr[j] = temp;
+    }
+}
+
+function shellSort (arr) {
+    let len = arr.length;
+    let gaps = [5, 3, 1];
+    let gLen = gaps.length;
+    for (let g = 0; g < gLen; g++) {
+        for (let i = gaps[g]; i < len; i++) {
+            let temp = arr[i];
+            let j = i;
+            while (j >= gaps[g] && arr[j - gaps[g]] > temp) {
+                arr[j] = arr[j - gaps[g]];
+                j -= gaps[g]
+            }
+            arr[j] = temp;
+        }
     }
 }
 

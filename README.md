@@ -90,3 +90,4 @@
     - bubbleSort √
     - selectionSort √
     - insertionSort √
+    - shellSort √
