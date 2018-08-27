@@ -91,3 +91,4 @@
     - selectionSort √
     - insertionSort √
     - shellSort √
+    - mergeSort √

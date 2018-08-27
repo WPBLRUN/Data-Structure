@@ -54,6 +54,82 @@ function shellSort (arr) {
     }
 }
 
+function mergeSort (arr) {
+    if (arr.length < 2) {
+        return;
+    }
+
+    let step = 1;
+    let left, right;
+    while (step < arr.length) {
+        left = 0;
+        right = step;
+        while (step < arr.length) {
+            mergeArrays(arr, left, left + step, right, right + step);
+            left += step;
+            right += step;
+        }
+        if (right < arr.length) {
+            mergeArrays(arr, left, left + step, right, arr.length);
+        }
+        step *= 2;
+    }
+}
+
+function mergeArrays (arr, startLeft, stopLeft, startRight, stopRight) {
+    let rightArr = new Array(stopRight - startRight + 1);
+    let leftArr = new Array(stopLeft - startLeft + 1);
+    let k = startRight;
+    for (let i = 0; i < (rightArr.length - 1); i++) {
+        rightArr[i] = arr[k];
+        k++;
+    }
+    k = startLeft;
+    for (let i = 0; i < (leftArr.length - 1); i++) {
+        leftArr[i] = arr[k];
+        k++;
+    }
+    rightArr[rightArr.length - 1] = Infinity;
+    leftArr[leftArr.length - 1] = Infinity;
+    let m = 0;
+    let n = 0;
+    for (let i = startLeft; i < stopRight; i++) {
+        if (leftArr[m] <= rightArr[n]) {
+            arr[i] = leftArr[m];
+            m++;
+        } else {
+            arr[i] = leftArr[n];
+            n++
+        }
+    }
+    console.log("left array: ", leftArr);
+    console.log("right array: ", rightArr);
+}
+
+function qSort (arr) {
+    if (arr.length < 2) {
+        return;
+    }
+
+    let lesser = [];
+    let greater = [];
+    let pivot = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < pivot) {
+            lesser.push(arr[i]);
+        } else {
+            greater.push(arr[i]);
+        }
+    }
+
+    //TODO: Fix this make quick sort more effective.
+    return qSort(lesser).concat(pivot, qSort(greater));
+}
+
+//TODO: Real quick sort.
+//TODO: Two way quick sort and what for.
+//TODO: Three way quick sort and what for.
+
 function swap (arr, index1, index2) {
     let temp = arr[index1];
     arr[index1] = arr[index2];
