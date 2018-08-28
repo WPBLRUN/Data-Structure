@@ -127,8 +127,44 @@ function qSort (arr) {
 }
 
 //TODO: Real quick sort.
-//TODO: Two way quick sort and what for.
 //TODO: Three way quick sort and what for.
+
+// Base quick sort, in-place sort.
+function partition (arr, left, right) {
+    let pivot = arr[left];
+    while (left < right) {
+        while (left < right && arr[right] >= pivot) {
+            right--;
+        }
+        arr[left] = arr[right];
+        while (left < right && arr[left] <= pivot) {
+            left++;
+        }
+        arr[right] = arr[left];
+    }
+    arr[left] = pivot;
+    return left;
+}
+
+function quickSort (arr, start, end) {
+    if (start < end) {
+        let index = partition(arr, start, end);
+        quickSort(arr, start, index - 1);
+        quickSort(arr, index + 1, end);
+    }
+}
+
+function arrayGenerator (size, limitation, floatOrInt) {
+    let array = [];
+    let length = size || Math.ceil(Math.random() * 5 + 5);
+    for (let i = 0; i < length; i++) {
+        array[i] = Math.random() * (limitation || 10);
+        if (!floatOrInt) array[i] = Math.floor(array[i]);
+    }
+    return array;
+}
+
+// TODO: Self-Organizing Data.
 
 function swap (arr, index1, index2) {
     let temp = arr[index1];
