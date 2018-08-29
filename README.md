@@ -92,3 +92,7 @@
     - insertionSort √
     - shellSort √
     - mergeSort √
+
+- Search
+    - Self organizing data
+    - Binary Search 
