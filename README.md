@@ -94,5 +94,9 @@
     - mergeSort √
 
 - Search
-    - Self organizing data
-    - Binary Search 
+    - Self organizing data √
+    - Binary Search √
+
+- Dynamic Programing
+    - Fibonacci √
+    - Longest Common Substring
